@@ -6,3 +6,5 @@ replays/
 .venv/
 .mypy_cache/
 replay.json
+data/**
+!data/**/.gitkeep

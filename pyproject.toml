@@ -10,6 +10,12 @@ python = "^3.11"
 jax = "*"
 gymnax = "==0.0.8"
 tyro = "*"
+polars = "^1.18.0"
+ipykernel = "^6.29.5"
+pandas = "^2.2.3"
+numpy = "^2.2.1"
+requests = "^2.32.3"
+kaggle = "^1.6.17"
 
 [tool.poetry.scripts]
 luxai-s3 = "luxai_runner.cli:main"

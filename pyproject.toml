@@ -1,0 +1,76 @@
+[tool.poetry]
+name = "luxai-s3"
+version = "0.1.0"
+description = "Lux AI Challenge Season 3 environment code"
+authors = ["Lux AI Challenge"]
+packages = [{ include = "luxai_s3", from = "src" }]  # srcディレクトリを考慮
+
+[tool.poetry.dependencies]
+python = "^3.11"
+jax = "*"
+gymnax = "==0.0.8"
+tyro = "*"
+
+[tool.poetry.scripts]
+luxai-s3 = "luxai_runner.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+allow_redefinition = true
+allow_untyped_globals = false
+check_untyped_defs = true
+color_output = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = false
+disallow_untyped_decorators = false
+disallow_untyped_defs = true
+error_summary = true
+ignore_missing_imports = true
+implicit_reexport = true
+namespace_packages = true
+no_implicit_optional = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+show_traceback = true
+strict = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = false
+
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+exclude = [
+    ".venv",
+    "venv",
+    "__pycache__",
+    ".git",
+]
+
+line-length = 120
+indent-width = 4
+
+
+[tool.ruff.lint]
+# PEP8のどのルールを対象に警告を出すか
+select = [
+    "C",
+    "E",
+    "F",
+    "W",
+]
+ignore = [
+]
+fixable = ["ALL"]
+
+
+[tool.ruff.format]
+quote-style = "double"

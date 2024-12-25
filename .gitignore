@@ -3,8 +3,11 @@ __pycache__
 episodes/
 .vscode/
 replays/
+replay.json
 .venv/
 .mypy_cache/
-replay.json
-data/**
-!data/**/.gitkeep
+
+data/meta/*
+data/match/*
+!data/match/.gitkeep
+!data/meta/.gitkeep

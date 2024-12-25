@@ -7,7 +7,9 @@ replay.json
 .venv/
 .mypy_cache/
 
+data/match/replay/*
+data/match/info/*
 data/meta/*
-data/match/*
-!data/match/.gitkeep
+!data/match/replay/.gitkeep
+!data/match/info/.gitkeep
 !data/meta/.gitkeep
